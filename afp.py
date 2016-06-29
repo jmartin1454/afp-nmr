@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+# Simulates AFP-NMR sequence by integrating the Bloch equations
+# by Jeff
+
 from math import *
 import numpy as np
 from scipy.integrate import ode
