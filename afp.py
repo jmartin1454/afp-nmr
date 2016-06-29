@@ -40,13 +40,13 @@ db0dt=deltab/deltat # b0 ramp rate (uT/s)
 s0=[0,0,-c*b00]      # starting polarization vector
 t0=0.               # starting time
 t1=2               # ending time (seconds)
-dt=.000001           # time step (seconds)
+dt=.00001           # time step (seconds)
 
 # lock-in parameters
 tau=.01              # lock-in time constant (seconds)
 
 # sparsification factor
-sparse=10000
+sparse=100000
 i=0
 
 def b(t):
@@ -101,6 +101,8 @@ plt.plot(sol[:,0],sol[:,1])
 plt.plot(sol[:,0],sol[:,2])
 plt.plot(sol[:,0],sol[:,3])
 plt.plot(sol[:,0],sol_demod_x[:,0])
+plt.xlabel('Time (s)')
+plt.ylabel('Spin components and demodulation')
 #plt.plot(sol[:,0],sol_demod_x[:,1])
 #plt.plot(sol[:,0],sol_demod_x[:,2])
 #plt.plot(sol[:,0],sol_demod_y[:,0])
@@ -109,4 +111,6 @@ plt.plot(sol[:,0],sol_demod_x[:,0])
 plt.show()
 
 plt.plot(sol[:,0],sol[:,4])
+plt.xlabel('Time (s)')
+plt.ylabel('B ($\mu$T)')
 plt.show()
